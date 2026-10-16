@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { requireAdmin } from '@/lib/admin/auth';
-import { COLLECTIONS } from '@/lib/admin/config';
+import { ADMIN_PAGES } from '@/lib/admin/config';
 
 export const metadata = { title: 'Dashboard' };
 
@@ -27,8 +27,8 @@ export default async function Dashboard() {
         <Link href="/admin/enquiries?status=new" className="adm-card tile">
           <span>New enquiries</span><span className="num">{newCount ?? 0}</span><span>{totalCount ?? 0} in total</span>
         </Link>
-        <Link href="/admin/settings" className="adm-card tile">
-          <b>Texts & contact details</b><span>Phone, WhatsApp, address, logo and page headings.</span>
+        <Link href="/admin/p/contact?tab=details" className="adm-card tile">
+          <b>Contact details</b><span>Phone, WhatsApp, email, address and working hours.</span>
         </Link>
       </div>
 
@@ -56,11 +56,12 @@ export default async function Dashboard() {
         ) : <p className="muted adm-pad" style={{ paddingTop: 8 }}>No enquiries yet. Messages from the contact form will appear here.</p>}
       </div>
 
-      <h2 style={{ marginBottom: 14 }}>Website content</h2>
+      <h2 style={{ marginBottom: 14 }}>Pages</h2>
       <div className="adm-grid">
-        {COLLECTIONS.map((c) => (
-          <Link key={c.key} href={`/admin/c/${c.key}`} className="adm-card tile">
-            <b>{c.label}</b><span>{c.description}</span>
+        {ADMIN_PAGES.map((p) => (
+          <Link key={p.id} href={`/admin/p/${p.id}`} className="adm-card tile">
+            <b>{p.label}</b><span>{p.description}</span>
+            <span style={{ marginTop: 6, fontWeight: 700, color: 'var(--royal)' }}>{p.tabs.length} sections →</span>
           </Link>
         ))}
       </div>

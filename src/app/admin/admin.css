@@ -95,6 +95,12 @@
 .enq-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
 .enq-msg { white-space: pre-wrap; line-height: 1.6; font-size: 15px; background: var(--page); border-radius: 10px; padding: 12px 14px; }
 .enq-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
+.page-tabs { display: flex; gap: 4px; border-bottom: 1.5px solid #DFE4F2; margin-bottom: 22px; overflow-x: auto; scrollbar-width: thin; }
+.page-tabs a { flex: none; padding: 12px 16px; text-decoration: none; font-size: 14.5px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1.5px; white-space: nowrap; }
+.page-tabs a:hover { color: var(--navy); }
+.page-tabs a.on { color: var(--navy); border-bottom-color: var(--gold); font-weight: 700; }
+.tab-body { display: flex; flex-direction: column; gap: 20px; max-width: 980px; }
+.block-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; padding: 22px 24px 16px; }
 .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
 .tabs a { padding: 8px 14px; border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--navy); background: var(--white); border: 1px solid var(--line); }
 .tabs a.on { background: var(--navy); color: var(--white); border-color: var(--navy); }

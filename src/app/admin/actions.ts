@@ -2,7 +2,7 @@
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { assertAdmin, type AdminSession } from '@/lib/admin/auth';
-import { getCollection, SETTING_GROUPS, type Field } from '@/lib/admin/config';
+import { getCollection, getSettingGroup, safeBack, type Field } from '@/lib/admin/config';
 
 const MAX_UPLOAD = 4 * 1024 * 1024;
 const IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/svg+xml', 'image/avif'];
@@ -47,7 +47,7 @@ async function readField(admin: AdminSession, form: FormData, f: Field, folder: 
 
 export type SaveState = { error?: string };
 
-export async function saveItem(collectionKey: string, id: string | null, _prev: SaveState, form: FormData): Promise<SaveState> {
+export async function saveItem(collectionKey: string, id: string | null, back: string, _prev: SaveState, form: FormData): Promise<SaveState> {
   const col = getCollection(collectionKey);
   if (!col) return { error: 'Unknown section.' };
   let admin: AdminSession;
@@ -79,7 +79,8 @@ export async function saveItem(collectionKey: string, id: string | null, _prev: 
     if (error) return { error: error.message };
   }
   refreshSite();
-  redirect(`/admin/c/${col.key}?saved=1`);
+  const dest = safeBack(back);
+  redirect(dest + (dest.includes('?') ? '&' : '?') + 'saved=1');
 }
 
 export async function deleteItem(collectionKey: string, id: string) {
@@ -88,7 +89,7 @@ export async function deleteItem(collectionKey: string, id: string) {
   const admin = await assertAdmin();
   await admin.supabase.from(col.table).delete().eq('id', id);
   refreshSite();
-  redirect(`/admin/c/${col.key}?deleted=1`);
+  revalidatePath('/admin', 'layout');
 }
 
 export async function moveItem(collectionKey: string, id: string, dir: 'up' | 'down') {
@@ -109,13 +110,13 @@ export async function moveItem(collectionKey: string, id: string, dir: 'up' | 'd
   ordered[dir === 'up' ? idx - 1 : idx + 1] = me;
   await Promise.all(ordered.map((r, k) => admin.supabase.from(col.table).update({ sort: k + 1 }).eq('id', r.id)));
   refreshSite();
-  revalidatePath(`/admin/c/${col.key}`);
+  revalidatePath('/admin', 'layout');
 }
 
 export async function saveSettings(_prev: SaveState & { ok?: boolean }, form: FormData): Promise<SaveState & { ok?: boolean }> {
   let admin: AdminSession;
   try { admin = await assertAdmin(); } catch { return { error: 'Your session has ended. Please sign in again.' }; }
-  const group = SETTING_GROUPS.find((g) => g.title === form.get('__group'));
+  const group = getSettingGroup(String(form.get('__group') ?? ''));
   if (!group) return { error: 'Unknown settings group.' };
   try {
     const rows = [];

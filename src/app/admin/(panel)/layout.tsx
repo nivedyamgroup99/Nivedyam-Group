@@ -1,5 +1,6 @@
 import Sidebar from '@/components/admin/Sidebar';
 import { requireAdmin } from '@/lib/admin/auth';
+import { ADMIN_PAGES } from '@/lib/admin/config';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,24 +13,11 @@ export default async function PanelLayout({ children }: { children: React.ReactN
       { href: '/admin', label: 'Dashboard' },
       { href: '/admin/enquiries', label: 'Enquiries', count: count ?? 0 },
     ] },
-    { title: 'Home page', items: [
-      { href: '/admin/c/slides', label: 'Slider' },
-      { href: '/admin/c/minerals', label: 'Mineral standards' },
-      { href: '/admin/c/stats', label: 'Numbers & stats' },
-      { href: '/admin/c/features', label: 'Feature cards' },
+    { title: 'Pages', items: ADMIN_PAGES.map((p) => ({ href: `/admin/p/${p.id}`, label: p.label })) },
+    { title: 'Settings', items: [
+      { href: '/admin/site', label: 'Logo & footer' },
+      { href: '/admin/users', label: 'Admin users' },
     ] },
-    { title: 'Products', items: [
-      { href: '/admin/c/products', label: 'Products' },
-      { href: '/admin/c/brands', label: 'Brands' },
-    ] },
-    { title: 'Pages', items: [
-      { href: '/admin/c/process_steps', label: 'Process stages' },
-      { href: '/admin/c/process_phases', label: 'Process phases' },
-      { href: '/admin/c/faqs', label: 'FAQs' },
-      { href: '/admin/c/reviews', label: 'Reviews' },
-      { href: '/admin/settings', label: 'Texts & contact details' },
-    ] },
-    { title: 'Team', items: [{ href: '/admin/users', label: 'Admin users' }] },
   ];
 
   return (

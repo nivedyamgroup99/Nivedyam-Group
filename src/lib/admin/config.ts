@@ -155,9 +155,11 @@ export const getCollection = (key: string) => COLLECTIONS.find((c) => c.key === 
 export const ICON_OPTIONS = FEATURE_ICONS.map((i) => ({ value: i, label: i }));
 
 export type SettingField = { key: string; label: string; type: 'text' | 'textarea' | 'image'; help?: string };
-export const SETTING_GROUPS: { title: string; description: string; fields: SettingField[] }[] = [
+export type SettingGroup = { id: string; title: string; description: string; fields: SettingField[] };
+
+export const SETTING_GROUPS: SettingGroup[] = [
   {
-    title: 'Brand', description: 'Name and logo shown in the header and footer.',
+    id: 'brand', title: 'Logo & footer', description: 'Name and logo in the header, and the short text in the footer.',
     fields: [
       { key: 'brand_name', label: 'Short name (header)', type: 'text' },
       { key: 'company_name', label: 'Full company name', type: 'text' },
@@ -166,7 +168,7 @@ export const SETTING_GROUPS: { title: string; description: string; fields: Setti
     ],
   },
   {
-    title: 'Contact details', description: 'Used on every page, in buttons and links.',
+    id: 'contact_details', title: 'Contact details', description: 'Used on every page: header button, footer and contact cards.',
     fields: [
       { key: 'phone', label: 'Phone (calls)', type: 'text', help: '10-digit Indian numbers get +91 added automatically.' },
       { key: 'whatsapp', label: 'WhatsApp number', type: 'text' },
@@ -177,50 +179,151 @@ export const SETTING_GROUPS: { title: string; description: string; fields: Setti
     ],
   },
   {
-    title: 'Home page', description: 'Text sections below the slider.',
+    id: 'home_intro', title: 'Intro section', description: 'The text next to the mineral card, below the slider.',
     fields: [
-      { key: 'home_details_eyebrow', label: 'Details: small heading', type: 'text' },
-      { key: 'home_details_title', label: 'Details: headline', type: 'text' },
-      { key: 'home_details_body', label: 'Details: text', type: 'textarea' },
-      { key: 'minerals_title', label: 'Mineral card title', type: 'text' },
-      { key: 'minerals_note', label: 'Mineral card note', type: 'text' },
-      { key: 'products_eyebrow', label: 'Products: small heading', type: 'text' },
-      { key: 'products_title', label: 'Products: headline', type: 'text' },
-      { key: 'delivery_title', label: 'Delivery band: headline', type: 'text' },
-      { key: 'delivery_body', label: 'Delivery band: text', type: 'textarea' },
+      { key: 'home_details_eyebrow', label: 'Small heading', type: 'text' },
+      { key: 'home_details_title', label: 'Headline', type: 'text' },
+      { key: 'home_details_body', label: 'Text', type: 'textarea' },
     ],
   },
   {
-    title: 'About page', description: 'Headline, story, quote and source sections.',
+    id: 'home_minerals', title: 'Mineral card', description: 'Title and note of the mineral card (also shown on the Process page).',
+    fields: [
+      { key: 'minerals_title', label: 'Card title', type: 'text' },
+      { key: 'minerals_note', label: 'Note under the values', type: 'text' },
+    ],
+  },
+  {
+    id: 'home_delivery', title: 'Delivery band', description: 'The dark band near the bottom of the home page.',
+    fields: [
+      { key: 'delivery_title', label: 'Headline', type: 'text' },
+      { key: 'delivery_body', label: 'Text', type: 'textarea' },
+    ],
+  },
+  {
+    id: 'products_heading', title: 'Section heading', description: 'Heading of the products section (home page and products page).',
+    fields: [
+      { key: 'products_eyebrow', label: 'Small heading', type: 'text' },
+      { key: 'products_title', label: 'Headline', type: 'text' },
+    ],
+  },
+  {
+    id: 'about_header', title: 'Page header', description: 'The top of the About page.',
     fields: [
       { key: 'about_hero_title', label: 'Headline', type: 'text' },
       { key: 'about_hero_body', label: 'Intro text', type: 'textarea' },
       { key: 'about_hero_image', label: 'Wide photo under the header', type: 'image' },
-      { key: 'about_story_title', label: 'Story: headline', type: 'text' },
-      { key: 'about_story_p1', label: 'Story: paragraph 1', type: 'textarea' },
-      { key: 'about_story_p2', label: 'Story: paragraph 2', type: 'textarea' },
-      { key: 'about_quote', label: 'Quote', type: 'textarea' },
-      { key: 'about_quote_name', label: 'Quote: name', type: 'text' },
-      { key: 'about_quote_role', label: 'Quote: role', type: 'text' },
-      { key: 'about_source_title', label: 'Source: headline', type: 'text' },
-      { key: 'about_source_body', label: 'Source: text', type: 'textarea' },
     ],
   },
   {
-    title: 'Process page', description: 'Header text. Stages and phases have their own sections.',
+    id: 'about_story', title: 'Story & quote', description: 'The “Our story” section and the quote card.',
+    fields: [
+      { key: 'about_story_title', label: 'Headline', type: 'text' },
+      { key: 'about_story_p1', label: 'Paragraph 1', type: 'textarea' },
+      { key: 'about_story_p2', label: 'Paragraph 2', type: 'textarea' },
+      { key: 'about_quote', label: 'Quote', type: 'textarea' },
+      { key: 'about_quote_name', label: 'Quote: name', type: 'text' },
+      { key: 'about_quote_role', label: 'Quote: role', type: 'text' },
+    ],
+  },
+  {
+    id: 'about_source', title: 'Source section', description: 'The reservoir section with the diagram.',
+    fields: [
+      { key: 'about_source_title', label: 'Headline', type: 'text' },
+      { key: 'about_source_body', label: 'Text', type: 'textarea' },
+    ],
+  },
+  {
+    id: 'process_header', title: 'Page header', description: 'The top of the Process page.',
     fields: [
       { key: 'process_hero_title', label: 'Headline', type: 'text' },
       { key: 'process_hero_body', label: 'Intro text', type: 'textarea' },
     ],
   },
   {
-    title: 'Contact page', description: 'Header text and the distributor band.',
+    id: 'contact_header', title: 'Page header', description: 'The top of the Contact page.',
     fields: [
       { key: 'contact_hero_title', label: 'Headline', type: 'text' },
       { key: 'contact_hero_body', label: 'Intro text', type: 'textarea' },
-      { key: 'distributor_count', label: 'Distributor number', type: 'text' },
-      { key: 'distributor_title', label: 'Distributor band: headline', type: 'text' },
-      { key: 'distributor_body', label: 'Distributor band: text', type: 'textarea' },
+    ],
+  },
+  {
+    id: 'contact_distributor', title: 'Distributor band', description: 'The blue “Join our distributor network” band.',
+    fields: [
+      { key: 'distributor_count', label: 'Big number', type: 'text' },
+      { key: 'distributor_title', label: 'Headline', type: 'text' },
+      { key: 'distributor_body', label: 'Text', type: 'textarea' },
     ],
   },
 ];
+
+export const getSettingGroup = (id: string) => SETTING_GROUPS.find((g) => g.id === id);
+
+// ---------------------------------------------------------------------------
+// Admin "Pages": each website page with its own tabs.
+// A tab shows one or more blocks: a text form (settings) or a list (collection).
+// `scope` limits a list to rows for that page and fills it in for new rows.
+// ---------------------------------------------------------------------------
+export type Block =
+  | { kind: 'settings'; group: string }
+  | { kind: 'collection'; key: string; scope?: string; title?: string; note?: string };
+export type PageTab = { id: string; label: string; blocks: Block[] };
+export type AdminPage = { id: string; label: string; path: string; description: string; tabs: PageTab[] };
+
+export const ADMIN_PAGES: AdminPage[] = [
+  {
+    id: 'home', label: 'Home', path: '/', description: 'Slider, intro, mineral card, feature cards and delivery band.',
+    tabs: [
+      { id: 'slider', label: 'Slider', blocks: [{ kind: 'collection', key: 'slides' }] },
+      { id: 'intro', label: 'Intro & numbers', blocks: [{ kind: 'settings', group: 'home_intro' }, { kind: 'collection', key: 'stats', scope: 'home', title: 'Numbers' }] },
+      { id: 'minerals', label: 'Mineral card', blocks: [{ kind: 'settings', group: 'home_minerals' }, { kind: 'collection', key: 'minerals', title: 'Mineral values' }] },
+      { id: 'features', label: 'Feature cards', blocks: [{ kind: 'collection', key: 'features', scope: 'home_features' }] },
+      { id: 'delivery', label: 'Delivery band', blocks: [{ kind: 'settings', group: 'home_delivery' }] },
+    ],
+  },
+  {
+    id: 'about', label: 'About', path: '/about', description: 'Header, story, numbers, source, values and reviews.',
+    tabs: [
+      { id: 'header', label: 'Header', blocks: [{ kind: 'settings', group: 'about_header' }] },
+      { id: 'story', label: 'Story & quote', blocks: [{ kind: 'settings', group: 'about_story' }] },
+      { id: 'numbers', label: 'Numbers', blocks: [{ kind: 'collection', key: 'stats', scope: 'about' }] },
+      { id: 'source', label: 'Source', blocks: [{ kind: 'settings', group: 'about_source' }, { kind: 'collection', key: 'features', scope: 'about_source', title: 'Checklist' }] },
+      { id: 'steps', label: 'Process summary', blocks: [{ kind: 'collection', key: 'features', scope: 'about_steps', note: 'The five-step summary. The full 14 stages are on the Process page.' }] },
+      { id: 'values', label: 'Values', blocks: [{ kind: 'collection', key: 'features', scope: 'about_values' }] },
+      { id: 'reviews', label: 'Reviews', blocks: [{ kind: 'collection', key: 'reviews' }] },
+    ],
+  },
+  {
+    id: 'process', label: 'Process', path: '/process', description: 'Header, the 14 stages and the 4 phases.',
+    tabs: [
+      { id: 'header', label: 'Header & numbers', blocks: [{ kind: 'settings', group: 'process_header' }, { kind: 'collection', key: 'stats', scope: 'process', title: 'Numbers' }] },
+      { id: 'stages', label: 'Stages', blocks: [{ kind: 'collection', key: 'process_steps' }] },
+      { id: 'phases', label: 'Phases', blocks: [{ kind: 'collection', key: 'process_phases' }] },
+    ],
+  },
+  {
+    id: 'products', label: 'Products', path: '/products', description: 'Bottles and jars, brands and the section heading.',
+    tabs: [
+      { id: 'list', label: 'Products', blocks: [{ kind: 'collection', key: 'products' }] },
+      { id: 'brands', label: 'Brands', blocks: [{ kind: 'collection', key: 'brands' }] },
+      { id: 'heading', label: 'Heading', blocks: [{ kind: 'settings', group: 'products_heading' }] },
+    ],
+  },
+  {
+    id: 'contact', label: 'Contact', path: '/contact', description: 'Contact details, header, distributor band and FAQs.',
+    tabs: [
+      { id: 'details', label: 'Contact details', blocks: [{ kind: 'settings', group: 'contact_details' }] },
+      { id: 'header', label: 'Header', blocks: [{ kind: 'settings', group: 'contact_header' }] },
+      { id: 'distributor', label: 'Distributor band', blocks: [{ kind: 'settings', group: 'contact_distributor' }] },
+      { id: 'faqs', label: 'FAQs', blocks: [{ kind: 'collection', key: 'faqs' }] },
+    ],
+  },
+];
+
+export const getAdminPage = (id: string) => ADMIN_PAGES.find((p) => p.id === id);
+
+/** Only allow redirects back into the admin panel. */
+export function safeBack(back: unknown, fallback = '/admin') {
+  const b = typeof back === 'string' ? back : '';
+  return b.startsWith('/admin') && !b.startsWith('//') ? b : fallback;
+}
