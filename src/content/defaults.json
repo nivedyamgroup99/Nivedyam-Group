@@ -1,0 +1,129 @@
+{
+  "site_settings": {
+    "brand_name": "Nivedyam",
+    "company_name": "Nivedyam Group of Industries",
+    "logo_url": "",
+    "phone": "8129 777 222",
+    "whatsapp": "8129 555 222",
+    "email": "nivedyamgroup777222@gmail.com",
+    "address": "XIII/26D, Thavidissery, Chooral, Aravanchal (PO), Payyannur, Kannur (Dist), Kerala 670353",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Nivedyam+Group+of+Industries+Thavidissery+Aravanchal+Payyanur+Kerala+670353",
+    "hours": "[Days and hours, e.g. Mon – Sat, 9:00 am – 6:00 pm]",
+    "footer_blurb": "Makers of Gangothri and Ifthaar drinking water. Bottled in Kannur, Kerala, without a human hand touching the water.",
+    "home_details_eyebrow": "Why Nivedyam",
+    "home_details_title": "Water begins ten metres underground.",
+    "home_details_body": "Our water is collected in a granite-lined monsoon reservoir ten metres below ground, sealed under a glass roof. From there it passes through 14 stages of filtration and is bottled without a human hand ever touching it.",
+    "minerals_title": "Gangothri mineral standards",
+    "minerals_note": "The mineral limits Gangothri is produced to meet.",
+    "products_eyebrow": "Our range",
+    "products_title": "Two brands, a size for every moment",
+    "delivery_title": "Home & office delivery, on your schedule",
+    "delivery_body": "Weekly or monthly plans for 20-litre jars and cases, through our 74 distributors across Kerala.",
+    "about_hero_title": "The reservoir, the land, and the people behind the brand.",
+    "about_hero_body": "From Thavidissery in Payyannur, Kannur, we bottle Gangothri and Ifthaar drinking water for homes, shops and offices across Kerala.",
+    "about_hero_image": "/images/banner.jpg",
+    "about_story_title": "Water begins ten metres underground, sealed under glass.",
+    "about_story_p1": "[How and when Nivedyam began: the founder's name, the year, and why they chose to start a drinking-water company in Kannur. Two to three sentences.]",
+    "about_story_p2": "Today our water is gathered in a granite-lined monsoon reservoir, carried through fourteen stages of filtration, and bottled without a single human hand touching it.",
+    "about_quote": "From monsoon rain to sealed bottle, nothing touched by hand.",
+    "about_quote_name": "[Founder / MD name]",
+    "about_quote_role": "[Title], Nivedyam Group of Industries",
+    "about_source_title": "A reservoir you can see into.",
+    "about_source_body": "Monsoon rain is gathered in a granite-lined reservoir ten metres below ground. Its roof is made of glass, so the water can be checked through a viewing port without anyone stepping inside.",
+    "process_hero_title": "From monsoon rain to sealed bottle.",
+    "process_hero_body": "Every bottle of Gangothri passes through fourteen automated stages, from source to seal, without a single human hand touching the water.",
+    "contact_hero_title": "Let's talk water.",
+    "contact_hero_body": "Orders, distribution enquiries, plant visits or a simple question. Message us on WhatsApp for the fastest response.",
+    "distributor_title": "Join our distributor network",
+    "distributor_body": "74 distributors already carry Gangothri across Kerala. Tell us about your area and we'll be in touch.",
+    "distributor_count": "74"
+  },
+  "slides": [
+    { "sort": 1, "eyebrow": "Pure. Safe. Trusted.", "title": "Hydrate the Right Way", "body": "Gangothri and Ifthaar drinking water from Nivedyam Group of Industries: 100% pure and safe, in every bottle.", "cta_label": "Explore products", "cta_link": "/products", "image_url": "/images/banner.jpg", "bottle_brand": "", "bottle_label": "", "stat_value": "100%", "stat_label": "Pure & safe" },
+    { "sort": 2, "eyebrow": "Gangothri · Ifthaar", "title": "Water begins ten metres underground.", "body": "Drawn from a granite-lined reservoir sealed under glass, filtered through 14 stages and bottled without a human touch.", "cta_label": "Explore products", "cta_link": "/products", "image_url": "/images/bottles.jpg", "bottle_brand": "", "bottle_label": "", "stat_value": "14", "stat_label": "Filtration stages" },
+    { "sort": 3, "eyebrow": "Gangothri purified water", "title": "From 300 ml to 2 litres.", "body": "A size for every table, from single servings to household bottles, and 20-litre jars for home and office.", "cta_label": "See all sizes", "cta_link": "/products", "image_url": "", "bottle_brand": "gangothri", "bottle_label": "1 Litre", "stat_value": "7,000 cases", "stat_label": "Packed every day" },
+    { "sort": 4, "eyebrow": "Ifthaar packaged drinking water", "title": "Near you, across Kerala.", "body": "Our distributor network brings Gangothri and Ifthaar to shops, homes and offices throughout the state.", "cta_label": "Find a distributor", "cta_link": "/contact", "image_url": "", "bottle_brand": "ifthaar", "bottle_label": "", "stat_value": "74", "stat_label": "Distributors" }
+  ],
+  "brands": [
+    { "sort": 1, "slug": "gangothri", "name": "Gangothri", "description": "Purified drinking water in 300 ml, 500 ml, 750 ml, 1 litre, 1.5 litre and 2 litre bottles, plus a 20-litre jar for homes and offices.", "label_color": "#0E8A7B", "cap_color": "#1FA36B" },
+    { "sort": 2, "slug": "ifthaar", "name": "Ifthaar", "description": "Packaged drinking water with purity in every drop. [Available sizes and where Ifthaar is sold.]", "label_color": "#1E3FA8", "cap_color": "#2346B5" }
+  ],
+  "products": [
+    { "sort": 1, "featured": true, "brand_slug": "gangothri", "name": "Gangothri 500 ml", "size": "500ml", "pack": "Regular · case of [00]", "tag": "Regular", "is_bulk": false, "bottle_height": 170 },
+    { "sort": 2, "featured": true, "brand_slug": "gangothri", "name": "Gangothri 1 Litre", "size": "1L", "pack": "Family size · case of [00]", "tag": "Family size", "is_bulk": false, "bottle_height": 195 },
+    { "sort": 3, "featured": true, "brand_slug": "gangothri", "name": "Gangothri 2 Litre", "size": "2L", "pack": "Household · case of [00]", "tag": "Jumbo", "is_bulk": false, "bottle_height": 210 },
+    { "sort": 4, "featured": true, "brand_slug": "ifthaar", "name": "Ifthaar", "size": "[SIZE]", "pack": "Case of [00]", "tag": "Ifthaar", "is_bulk": false, "bottle_height": 190 },
+    { "sort": 5, "featured": false, "brand_slug": "gangothri", "name": "Gangothri 300 ml", "size": "300ml", "pack": "Single serving · case of [00]", "tag": "Single serving", "is_bulk": false, "bottle_height": 150 },
+    { "sort": 6, "featured": false, "brand_slug": "gangothri", "name": "Gangothri 750 ml", "size": "750ml", "pack": "Table size · case of [00]", "tag": "Table size", "is_bulk": false, "bottle_height": 180 },
+    { "sort": 7, "featured": false, "brand_slug": "gangothri", "name": "Gangothri 1.5 Litre", "size": "1.5L", "pack": "Case of [00]", "tag": "Gangothri", "is_bulk": false, "bottle_height": 200 },
+    { "sort": 8, "featured": false, "brand_slug": "gangothri", "name": "Gangothri 20 L jar", "size": "20L", "pack": "Refillable jar for home & office", "tag": "Home & office", "is_bulk": true, "bottle_height": 210 }
+  ],
+  "stats": [
+    { "sort": 1, "page": "home", "value": "14", "label": "Filtration stages" },
+    { "sort": 2, "page": "home", "value": "7,000", "label": "Cases packed daily" },
+    { "sort": 3, "page": "home", "value": "74", "label": "Distributors across Kerala" },
+    { "sort": 1, "page": "about", "value": "10 m", "label": "Reservoir depth underground" },
+    { "sort": 2, "page": "about", "value": "14", "label": "Filtration stages, zero human contact" },
+    { "sort": 3, "page": "about", "value": "7,000", "label": "Cases packed every day" },
+    { "sort": 4, "page": "about", "value": "74", "label": "Distributors across Kerala" },
+    { "sort": 1, "page": "process", "value": "14", "label": "Automated stages" },
+    { "sort": 2, "page": "process", "value": "0", "label": "Human contact with the water" },
+    { "sort": 3, "page": "process", "value": "2", "label": "Lab checks: in-house and BIS-approved" }
+  ],
+  "features": [
+    { "sort": 1, "page": "home_features", "icon": "mountain", "title": "Protected source", "body": "A granite-lined monsoon reservoir, ten metres below ground and sealed under glass." },
+    { "sort": 2, "page": "home_features", "icon": "filter", "title": "14-stage filtration", "body": "Every drop passes through fourteen filtration stages before a bottle is filled." },
+    { "sort": 3, "page": "home_features", "icon": "shield", "title": "Untouched by hand", "body": "Bottling is fully automated, so no human hand touches the water." },
+    { "sort": 4, "page": "home_features", "icon": "eye", "title": "Open to inspection", "body": "A viewing port in the glass roof lets the reservoir be checked without anyone entering it." },
+    { "sort": 1, "page": "about_source", "icon": "check", "title": "Sealed from the surface", "body": "protected deep underground." },
+    { "sort": 2, "page": "about_source", "icon": "check", "title": "Inspected without contact", "body": "through the glass viewing port." },
+    { "sort": 3, "page": "about_source", "icon": "check", "title": "Lined with granite", "body": "a natural, stable stone." },
+    { "sort": 1, "page": "about_steps", "icon": "drop", "title": "Monsoon rain", "body": "Rainwater from the monsoon is collected at our site in Kannur." },
+    { "sort": 2, "page": "about_steps", "icon": "drop", "title": "Underground reservoir", "body": "Stored ten metres below ground in a granite-lined tank with a glass roof." },
+    { "sort": 3, "page": "about_steps", "icon": "drop", "title": "14-stage filtration", "body": "The water passes through fourteen stages of filtration and purification." },
+    { "sort": 4, "page": "about_steps", "icon": "drop", "title": "Touch-free bottling", "body": "Automated lines fill and seal every bottle with no human contact." },
+    { "sort": 5, "page": "about_steps", "icon": "drop", "title": "Across Kerala", "body": "7,000 cases a day reach customers through 74 distributors." },
+    { "sort": 1, "page": "about_values", "icon": "drop", "title": "Pure", "body": "Fourteen stages of filtration and mineral levels kept within the required limits for TDS, calcium, magnesium and pH." },
+    { "sort": 2, "page": "about_values", "icon": "shield", "title": "Safe", "body": "Automated bottling means the water reaches the sealed bottle without any human contact." },
+    { "sort": 3, "page": "about_values", "icon": "thumb", "title": "Trusted", "body": "Carried by 74 distributors and chosen by families, shops and offices throughout Kerala." }
+  ],
+  "minerals": [
+    { "sort": 1, "label": "TDS (Total Dissolved Solids)", "range": "75 – 500", "unit": "mg/L", "note": "A minimum of 75 mg/L is now mandatory", "highlight": true },
+    { "sort": 2, "label": "Calcium (as Ca)", "range": "10 – 75", "unit": "mg/L", "note": "", "highlight": false },
+    { "sort": 3, "label": "Magnesium (as Mg)", "range": "5 – 30", "unit": "mg/L", "note": "", "highlight": false },
+    { "sort": 4, "label": "pH level", "range": "6.5 – 8.5", "unit": "", "note": "Neutral, balanced water", "highlight": false }
+  ],
+  "process_phases": [
+    { "sort": 1, "name": "Source & storage", "intro": "Water is collected from a protected source, given a first disinfection and allowed to settle before treatment begins.", "color": "#0B7568", "ink": "#FFFFFF", "tint": "#E6F3F0" },
+    { "sort": 2, "name": "Filtration", "intro": "Sand, carbon and cartridge filters remove sediment, chlorine, odour and colour, step by step.", "color": "#2346B5", "ink": "#FFFFFF", "tint": "#E8EDFA" },
+    { "sort": 3, "name": "Purification & sterilisation", "intro": "Membranes, fine filters, ultraviolet light and ozone deal with bacteria, viruses and spores.", "color": "#0F1E5A", "ink": "#FFFFFF", "tint": "#DDE3F5" },
+    { "sort": 4, "name": "Fill & quality", "intro": "Bottles are rinsed, filled and capped by machine, tested, then sealed and packed for distribution.", "color": "#F4B942", "ink": "#0F1E5A", "tint": "#FFF4DC" }
+  ],
+  "process_steps": [
+    { "sort": 1, "phase_sort": 1, "title": "Raw water harvesting", "short": "Harvesting", "body": "Water is drawn from our protected source and screened to remove leaves, dust and other debris.", "spec": "" },
+    { "sort": 2, "phase_sort": 1, "title": "Chlorine doser", "short": "Chlorine", "body": "A measured dose of sodium hypochlorite gives the water its first line of disinfection.", "spec": "3–5 ppm" },
+    { "sort": 3, "phase_sort": 1, "title": "Raw water tank", "short": "Raw tank", "body": "The water rests in primary storage so that suspended particles can settle before treatment.", "spec": "" },
+    { "sort": 4, "phase_sort": 2, "title": "Pressure sand filter", "short": "Sand filter", "body": "Removes suspended matter and improves clarity. The filter cleans itself with an automatic back-wash.", "spec": "Auto back-wash" },
+    { "sort": 5, "phase_sort": 2, "title": "Activated carbon filter", "short": "Carbon", "body": "Takes out the remaining chlorine along with odour, colour and trace organic compounds.", "spec": "" },
+    { "sort": 6, "phase_sort": 2, "title": "Pre-micron filters", "short": "Pre-micron", "body": "Cartridge filters trap finer sediment and parasite eggs that earlier stages let through.", "spec": "10 µm · 5 µm" },
+    { "sort": 7, "phase_sort": 3, "title": "High pressure pump", "short": "HP pump", "body": "Pushes the pre-filtered water into the reverse osmosis system at a carefully controlled pressure.", "spec": "RO feed" },
+    { "sort": 8, "phase_sort": 3, "title": "Ultra filtration", "short": "Ultra filter", "body": "A fine membrane holds back bacteria and most viruses.", "spec": "Membrane" },
+    { "sort": 9, "phase_sort": 3, "title": "Post-micron filters", "short": "Post-micron", "body": "An even finer cartridge removes viruses, bacterial cells and mould spores.", "spec": "0.5 µm" },
+    { "sort": 10, "phase_sort": 3, "title": "UV steriliser", "short": "UV", "body": "Ultraviolet lamps neutralise any bacteria that remain in the water.", "spec": "UV light" },
+    { "sort": 11, "phase_sort": 3, "title": "Ozonator", "short": "Ozone", "body": "Ozone treatment gives a final disinfection, reacting far faster than chemical methods.", "spec": "~3,200× faster" },
+    { "sort": 12, "phase_sort": 4, "title": "Filling section", "short": "Filling", "body": "Machines rinse, fill and cap every bottle and jar automatically.", "spec": "Fully automatic" },
+    { "sort": 13, "phase_sort": 4, "title": "QC lab", "short": "QC lab", "body": "Each batch is tested in our own laboratory and checked by a BIS-approved external lab before release.", "spec": "BIS-approved" },
+    { "sort": 14, "phase_sort": 4, "title": "Finished product", "short": "Sealed", "body": "Sealed bottles move along automatic conveyors to be packed and sent out for distribution.", "spec": "Ready to ship" }
+  ],
+  "faqs": [
+    { "sort": 1, "question": "What sizes are available?", "answer": "Gangothri comes in 300 ml, 500 ml, 750 ml, 1 litre, 1.5 litre and 2 litre bottles, plus a 20-litre jar for homes and offices." },
+    { "sort": 2, "question": "How can I contact customer support?", "answer": "Email nivedyamgroup777222@gmail.com or call 8129 777 222. For the quickest reply, message us on WhatsApp at 8129 555 222." },
+    { "sort": 3, "question": "What is your return policy?", "answer": "Unopened products in their original packaging can be returned within 30 days with proof of purchase. Refunds are processed within 5–7 business days." },
+    { "sort": 4, "question": "Where is your plant?", "answer": "Our plant is at XIII/26D, Thavidissery, Chooral, Aravanchal (PO), Payyannur, Kannur, Kerala 670353. Use the Google Maps link above for directions." }
+  ],
+  "reviews": [
+    { "sort": 1, "name": "Sneha Chandran Pk", "text": "A trusted brand with consistent quality, exceptional purity, and refreshing taste.", "rating": 5 },
+    { "sort": 2, "name": "Raghuraj Poovatta", "text": "Nivedyam Group is the best mineral water company.", "rating": 5 },
+    { "sort": 3, "name": "Mahesh VK", "text": "Trusted brand.", "rating": 5 }
+  ]
+}
