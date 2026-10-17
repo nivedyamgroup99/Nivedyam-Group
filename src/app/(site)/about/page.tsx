@@ -101,7 +101,7 @@ export default async function AboutPage() {
             <h2 className="h2">From monsoon rain to sealed bottle</h2>
             <p className="lead" style={{ maxWidth: '36rem' }}>Not one step involves a human hand touching the water. <Link href="/process">See all 14 stages</Link>.</p>
           </div>
-          <div className="steps" style={{ gridTemplateColumns: `repeat(${Math.min(Math.max(steps.length, 1), 5)}, minmax(0, 1fr))` }}>
+          <div className="steps" style={{ '--cols': Math.min(Math.max(steps.length, 1), 5) } as React.CSSProperties}>
             <div className="step-line" aria-hidden="true" />
             {steps.map((st, i) => (
               <div key={st.id ?? i} className="step">
