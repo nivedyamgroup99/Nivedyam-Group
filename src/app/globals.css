@@ -186,6 +186,7 @@ button { font-family: inherit; }
 .brand-card { color: var(--white); border-radius: 28px; padding: 40px; display: flex; gap: 28px; align-items: center; overflow: hidden; }
 .brand-card h3 { font-family: Georgia, serif; font-size: 34px; }
 .brand-card > svg { flex: none; }
+.plant-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 28px; box-shadow: 0 24px 48px rgba(15, 30, 90, .14); }
 .brand-photo { flex: none; display: block; height: 240px; width: auto; max-width: 180px; object-fit: contain; filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .28)); }
 @media (max-width: 760px) { .brand-photo { height: 220px; max-width: 70%; margin: 0 auto; } }
 .brand-logo { display: block; height: 72px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 10px 24px rgba(0, 0, 0, .25); }

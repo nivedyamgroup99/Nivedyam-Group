@@ -7,7 +7,7 @@ import { FeatureIcon, Flask, WhatsApp } from '@/components/icons';
 import { getMinerals, getPhases, getSettings, getStats, getSteps, waLink } from '@/lib/content';
 
 export const revalidate = 300;
-export const metadata: Metadata = { title: 'Our process', description: 'From monsoon rain to sealed bottle: the 14 automated stages behind every bottle of Gangothri.' };
+export const metadata: Metadata = { title: 'Our process', description: 'From our plant to your table: the automated stages behind every bottle of Gangothri and Ifthaar.' };
 
 const scale = [
   { label: 'Human hair', note: '~70 µm', w: 100, c: 'rgba(255,255,255,0.35)' },

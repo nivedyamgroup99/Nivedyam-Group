@@ -8,7 +8,7 @@ import {
 } from '@/lib/content';
 
 export const revalidate = 300;
-export const metadata: Metadata = { title: 'About us', description: 'The reservoir, the land and the people behind Gangothri and Ifthaar drinking water.' };
+export const metadata: Metadata = { title: 'About us', description: 'The people, the plant and the journey behind Gangothri and Ifthaar packaged drinking water, made in Payyanur, Kannur since 2012.' };
 
 const valueColors = ['#2346B5', '#0E8A7B', '#F4B942', '#0F1E5A'];
 
@@ -74,11 +74,12 @@ export default async function AboutPage() {
       {/* Source */}
       <section style={{ paddingBottom: 104 }}>
         <div className="wrap two-col">
-          <div className="card" style={{ padding: 24 }}>
-            <ReservoirDiagram />
-          </div>
+          {s.about_source_image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="plant-photo" src={s.about_source_image} alt={`${s.company_name} bottling line`} />
+          ) : <div aria-hidden="true" />}
           <div className="stack">
-            <span className="eyebrow">The source</span>
+            <span className="eyebrow">Our plant</span>
             <h2 className="h2">{s.about_source_title}</h2>
             <p className="lead">{s.about_source_body}</p>
             <div className="stack" style={{ gap: 14 }}>
@@ -98,8 +99,8 @@ export default async function AboutPage() {
         <div className="wrap">
           <div className="center-head" style={{ marginBottom: 56 }}>
             <span className="eyebrow">Our process</span>
-            <h2 className="h2">From monsoon rain to sealed bottle</h2>
-            <p className="lead" style={{ maxWidth: '36rem' }}>Not one step involves a human hand touching the water. <Link href="/process">See all 14 stages</Link>.</p>
+            <h2 className="h2">From our plant to your table</h2>
+            <p className="lead" style={{ maxWidth: '36rem' }}>How every bottle of Gangothri and Ifthaar reaches you. <Link href="/process">See our full process</Link>.</p>
           </div>
           <div className="steps" style={{ '--cols': Math.min(Math.max(steps.length, 1), 5) } as React.CSSProperties}>
             <div className="step-line" aria-hidden="true" />
@@ -206,36 +207,5 @@ export default async function AboutPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function ReservoirDiagram() {
-  return (
-    <svg viewBox="0 0 560 420" role="img" aria-label="Cross-section of the reservoir: a granite-lined tank ten metres underground with a glass roof and a viewing port" style={{ display: 'block', width: '100%', height: 'auto' }}>
-      <rect x="0" y="0" width="560" height="120" rx="18" fill="#E8EDFA" />
-      <rect x="0" y="100" width="560" height="320" rx="18" fill="#D9E0F2" />
-      <path d="M0 132 h560" stroke="#B8C6EC" strokeWidth="2" strokeDasharray="4 6" />
-      <path d="M0 200 h560 M0 270 h560 M0 340 h560" stroke="#C8D1EE" strokeWidth="1.5" />
-      <rect x="130" y="112" width="300" height="10" rx="3" fill="#BFD0F7" stroke="#2346B5" strokeWidth="2" />
-      <path d="M150 116 l40 0 M220 116 l18 0" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" />
-      <rect x="120" y="122" width="320" height="260" rx="10" fill="#8C97B8" />
-      <rect x="140" y="132" width="280" height="236" rx="6" fill="#F5F7FC" />
-      <g className="ripple"><path d="M140 200 q 20 -8 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 v 168 h -320 z" fill="#2346B5" /></g>
-      <path d="M170 250 q 16 -6 32 0 M260 290 q 16 -6 32 0 M330 240 q 16 -6 32 0" stroke="#9FB4F0" strokeWidth="2" fill="none" strokeLinecap="round" />
-      <circle cx="380" cy="80" r="26" fill="#FFFFFF" stroke="#0B7568" strokeWidth="2" />
-      <path d="M366 80 s6 -9 14 -9 14 9 14 9 -6 9 -14 9 -14 -9 -14 -9z" fill="none" stroke="#0B7568" strokeWidth="2" />
-      <circle cx="380" cy="80" r="4" fill="#0B7568" />
-      <text x="416" y="74" fontFamily="Sora, sans-serif" fontWeight="700" fontSize="14" fill="#0F1E5A">Viewing port</text>
-      <text x="416" y="92" fontSize="12" fill="#4A5578">tank 01</text>
-      <text x="150" y="90" fontFamily="Sora, sans-serif" fontWeight="700" fontSize="14" fill="#0F1E5A">Glass roof</text>
-      <path d="M190 98 v 10" stroke="#0F1E5A" strokeWidth="1.5" />
-      <path d="M486 122 v 260" stroke="#0F1E5A" strokeWidth="1.5" />
-      <path d="M480 128 l6 -6 6 6 M480 376 l6 6 6 -6" stroke="#0F1E5A" strokeWidth="1.5" fill="none" />
-      <text x="500" y="258" fontFamily="Sora, sans-serif" fontWeight="700" fontSize="15" fill="#0F1E5A">10 m</text>
-      <text x="40" y="250" fontSize="12" fill="#3D4870">Granite</text>
-      <text x="40" y="266" fontSize="12" fill="#3D4870">lining</text>
-      <path d="M88 256 h 30" stroke="#3D4870" strokeWidth="1.5" />
-      <text x="226" y="330" fontFamily="Sora, sans-serif" fontWeight="700" fontSize="15" fill="#FFFFFF">Monsoon water</text>
-    </svg>
   );
 }

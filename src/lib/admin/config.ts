@@ -18,7 +18,7 @@ const PAGES_STATS = [
 ];
 const PAGES_FEATURES = [
   { value: 'home_features', label: 'Home: feature tiles' },
-  { value: 'about_source', label: 'About: source checklist' },
+  { value: 'about_source', label: 'About: plant checklist' },
   { value: 'about_steps', label: 'About: process summary steps' },
   { value: 'about_values', label: 'About: Pure / Safe / Trusted' },
 ];
@@ -229,10 +229,11 @@ export const SETTING_GROUPS: SettingGroup[] = [
     ],
   },
   {
-    id: 'about_source', title: 'Source section', description: 'The reservoir section with the diagram.',
+    id: 'about_source', title: 'Plant section', description: 'The section about the plant, with a photo.',
     fields: [
       { key: 'about_source_title', label: 'Headline', type: 'text' },
       { key: 'about_source_body', label: 'Text', type: 'textarea' },
+      { key: 'about_source_image', label: 'Photo', type: 'image', help: 'A photo of the plant or bottling line. Leave empty to hide the photo.' },
     ],
   },
   {
@@ -284,13 +285,13 @@ export const ADMIN_PAGES: AdminPage[] = [
     ],
   },
   {
-    id: 'about', label: 'About', path: '/about', description: 'Header, story, numbers, source, values and reviews.',
+    id: 'about', label: 'About', path: '/about', description: 'Header, story, numbers, plant, values and reviews.',
     tabs: [
       { id: 'header', label: 'Header', blocks: [{ kind: 'settings', group: 'about_header' }] },
       { id: 'story', label: 'Story & quote', blocks: [{ kind: 'settings', group: 'about_story' }] },
       { id: 'numbers', label: 'Numbers', blocks: [{ kind: 'collection', key: 'stats', scope: 'about' }] },
-      { id: 'source', label: 'Source', blocks: [{ kind: 'settings', group: 'about_source' }, { kind: 'collection', key: 'features', scope: 'about_source', title: 'Checklist' }] },
-      { id: 'steps', label: 'Process summary', blocks: [{ kind: 'collection', key: 'features', scope: 'about_steps', note: 'The five-step summary. The full 14 stages are on the Process page.' }] },
+      { id: 'source', label: 'Plant', blocks: [{ kind: 'settings', group: 'about_source' }, { kind: 'collection', key: 'features', scope: 'about_source', title: 'Checklist' }] },
+      { id: 'steps', label: 'Process summary', blocks: [{ kind: 'collection', key: 'features', scope: 'about_steps', note: 'The five-step summary under “From our plant to your table”. The full stages are on the Process page.' }] },
       { id: 'values', label: 'Values', blocks: [{ kind: 'collection', key: 'features', scope: 'about_values' }] },
       { id: 'reviews', label: 'Reviews', blocks: [{ kind: 'collection', key: 'reviews' }] },
     ],

@@ -14,37 +14,38 @@ insert into public.site_settings (key, value) values
   ('hours', '[Days and hours, e.g. Mon – Sat, 9:00 am – 6:00 pm]'),
   ('footer_blurb', 'Makers of Gangothri and Ifthaar drinking water. Bottled in Kannur, Kerala, without a human hand touching the water.'),
   ('home_details_eyebrow', 'Why Nivedyam'),
-  ('home_details_title', 'Water begins ten metres underground.'),
-  ('home_details_body', 'Our water is collected in a granite-lined monsoon reservoir ten metres below ground, sealed under a glass roof. From there it passes through 14 stages of filtration and is bottled without a human hand ever touching it.'),
+  ('home_details_title', 'Made in Kannur since 2012.'),
+  ('home_details_body', 'Gangothri and Ifthaar are produced in our own plant in Kannur, purified through a multi-stage process and certified by FSSAI and by BIS under IS 14543. Our own fleet delivers to 80+ distributors across North Kerala every day.'),
   ('minerals_title', 'Gangothri mineral standards'),
   ('minerals_note', 'The mineral limits Gangothri is produced to meet.'),
   ('products_eyebrow', 'Our range'),
   ('products_title', 'Two brands, a size for every moment'),
   ('delivery_title', 'Home & office delivery, on your schedule'),
   ('delivery_body', 'Weekly or monthly plans for 20-litre jars and cases, through our 74 distributors across Kerala.'),
-  ('about_hero_title', 'The reservoir, the land, and the people behind the brand.'),
+  ('about_hero_title', 'The people, the plant and the journey behind the brand.'),
   ('about_hero_body', 'From Thavidissery in Payyannur, Kannur, we bottle Gangothri and Ifthaar drinking water for homes, shops and offices across Kerala.'),
   ('about_hero_image', '/images/banner.jpg'),
-  ('about_story_title', 'Water begins ten metres underground, sealed under glass.'),
-  ('about_story_p1', '[How and when Nivedyam began: the founder''s name, the year, and why they chose to start a drinking-water company in Kannur. Two to three sentences.]'),
-  ('about_story_p2', 'Today our water is gathered in a granite-lined monsoon reservoir, carried through fourteen stages of filtration, and bottled without a single human hand touching it.'),
-  ('about_quote', 'From monsoon rain to sealed bottle, nothing touched by hand.'),
-  ('about_quote_name', '[Founder / MD name]'),
-  ('about_quote_role', '[Title], Nivedyam Group of Industries'),
-  ('about_source_title', 'A reservoir you can see into.'),
-  ('about_source_body', 'Monsoon rain is gathered in a granite-lined reservoir ten metres below ground. Its roof is made of glass, so the water can be checked through a viewing port without anyone stepping inside.'),
-  ('process_hero_title', 'From monsoon rain to sealed bottle.'),
+  ('about_story_title', 'Built in Payyanur, one step at a time, since 2012.'),
+  ('about_story_p1', 'Nivedyam was founded in 2012 in Payyanur by Rajeesh P. A BBA graduate, he spent four years as Accounts Head with Lazza, Skei and Uncle John in Ernakulam, then two years in production, before starting his own packaged drinking water business.'),
+  ('about_story_p2', 'Through years of early losses and expansions in 2016, 2019, 2022 and 2026, Nivedyam has grown into the No. 2 packaged drinking water business in the Kannur–Kasaragod region, certified by FSSAI and by BIS under IS 14543.'),
+  ('about_quote', 'To bring safe, quality drinking water to every community we serve.'),
+  ('about_quote_name', 'Our mission'),
+  ('about_quote_role', 'Nivedyam Group of Industries'),
+  ('about_source_title', 'Made in our own plant in Kannur.'),
+  ('about_source_body', 'Gangothri and Ifthaar are produced at our packaged drinking water unit in Kannur district, with production and storage facilities built up over several expansion stages. About 40 people run the plant across day and night shifts.'),
+  ('process_hero_title', 'From our plant to your table.'),
   ('process_hero_body', 'Every bottle of Gangothri passes through fourteen automated stages, from source to seal, without a single human hand touching the water.'),
   ('contact_hero_title', 'Let''s talk water.'),
   ('contact_hero_body', 'Orders, distribution enquiries, plant visits or a simple question. Message us on WhatsApp for the fastest response.'),
   ('distributor_title', 'Join our distributor network'),
   ('distributor_body', '74 distributors already carry Gangothri across Kerala. Tell us about your area and we''ll be in touch.'),
-  ('distributor_count', '74')
+  ('distributor_count', '74'),
+  ('about_source_image', '/images/plant.jpg')
 on conflict (key) do nothing;
 
 insert into public.slides (sort, eyebrow, title, body, cta_label, cta_link, image_url, bottle_brand, bottle_label, stat_value, stat_label) values
   (1, 'Pure. Safe. Trusted.', 'Hydrate the Right Way', 'Gangothri and Ifthaar drinking water from Nivedyam Group of Industries: 100% pure and safe, in every bottle.', 'Explore products', '/products', '/images/banner.jpg', '', '', '100%', 'Pure & safe'),
-  (2, 'Gangothri · Ifthaar', 'Water begins ten metres underground.', 'Drawn from a granite-lined reservoir sealed under glass, filtered through 14 stages and bottled without a human touch.', 'Explore products', '/products', '/images/bottles.jpg', '', '', '14', 'Filtration stages'),
+  (2, 'Gangothri · Ifthaar', 'Pure water, made in Kannur.', 'Purified in our own plant, certified by FSSAI and BIS, and delivered across North Kerala since 2012.', 'Explore products', '/products', '/images/bottles.jpg', '', '', '2012', 'Serving since'),
   (3, 'Gangothri purified water', 'From 300 ml to 2 litres.', 'A size for every table, from single servings to household bottles, and 20-litre jars for home and office.', 'See all sizes', '/products', '', 'gangothri', '1 Litre', '7,000 cases', 'Packed every day'),
   (4, 'Ifthaar packaged drinking water', 'Near you, across Kerala.', 'Our distributor network brings Gangothri and Ifthaar to shops, homes and offices throughout the state.', 'Find a distributor', '/contact', '', 'ifthaar', '', '74', 'Distributors');
 
@@ -66,30 +67,30 @@ insert into public.stats (sort, page, value, label) values
   (1, 'home', '14', 'Filtration stages'),
   (2, 'home', '7,000', 'Cases packed daily'),
   (3, 'home', '74', 'Distributors across Kerala'),
-  (1, 'about', '10 m', 'Reservoir depth underground'),
-  (2, 'about', '14', 'Filtration stages, zero human contact'),
-  (3, 'about', '7,000', 'Cases packed every day'),
-  (4, 'about', '74', 'Distributors across Kerala'),
   (1, 'process', '14', 'Automated stages'),
   (2, 'process', '0', 'Human contact with the water'),
-  (3, 'process', '2', 'Lab checks: in-house and BIS-approved');
+  (3, 'process', '2', 'Lab checks: in-house and BIS-approved'),
+  (1, 'about', '2012', 'Established in Payyanur'),
+  (2, 'about', '80+', 'Distributors'),
+  (3, 'about', 'No. 2', 'In Kannur & Kasaragod'),
+  (4, 'about', '4', 'Districts in North Kerala');
 
 insert into public.features (sort, page, icon, title, body) values
-  (1, 'home_features', 'mountain', 'Protected source', 'A granite-lined monsoon reservoir, ten metres below ground and sealed under glass.'),
+  (1, 'home_features', 'check', 'Certified quality', 'Certified by FSSAI and by BIS under IS 14543 for packaged drinking water.'),
   (2, 'home_features', 'filter', '14-stage filtration', 'Every drop passes through fourteen filtration stages before a bottle is filled.'),
   (3, 'home_features', 'shield', 'Untouched by hand', 'Bottling is fully automated, so no human hand touches the water.'),
-  (4, 'home_features', 'eye', 'Open to inspection', 'A viewing port in the glass roof lets the reservoir be checked without anyone entering it.'),
-  (1, 'about_source', 'check', 'Sealed from the surface', 'protected deep underground.'),
-  (2, 'about_source', 'check', 'Inspected without contact', 'through the glass viewing port.'),
-  (3, 'about_source', 'check', 'Lined with granite', 'a natural, stable stone.'),
-  (1, 'about_steps', 'drop', 'Monsoon rain', 'Rainwater from the monsoon is collected at our site in Kannur.'),
-  (2, 'about_steps', 'drop', 'Underground reservoir', 'Stored ten metres below ground in a granite-lined tank with a glass roof.'),
-  (3, 'about_steps', 'drop', '14-stage filtration', 'The water passes through fourteen stages of filtration and purification.'),
-  (4, 'about_steps', 'drop', 'Touch-free bottling', 'Automated lines fill and seal every bottle with no human contact.'),
-  (5, 'about_steps', 'drop', 'Across Kerala', '7,000 cases a day reach customers through 74 distributors.'),
-  (1, 'about_values', 'drop', 'Pure', 'Fourteen stages of filtration and mineral levels kept within the required limits for TDS, calcium, magnesium and pH.'),
+  (4, 'home_features', 'eye', 'Delivered by our own fleet', '10 trucks carry fresh stock to distributors across North Kerala every day.'),
+  (1, 'about_values', 'drop', 'Pure', 'Multi-stage purification and mineral levels kept within the required limits for TDS, calcium, magnesium and pH.'),
   (2, 'about_values', 'shield', 'Safe', 'Automated bottling means the water reaches the sealed bottle without any human contact.'),
-  (3, 'about_values', 'thumb', 'Trusted', 'Carried by 74 distributors and chosen by families, shops and offices throughout Kerala.');
+  (3, 'about_values', 'thumb', 'Trusted', 'Carried by 80+ distributors and chosen by families, shops and offices across North Kerala.'),
+  (1, 'about_source', 'check', 'FSSAI & BIS certified', 'to IS 14543 for packaged drinking water.'),
+  (2, 'about_source', 'check', 'Our own delivery fleet', '10 BharatBenz trucks on the road every day.'),
+  (3, 'about_source', 'check', 'Institutional supply', 'for Indian Railways and the Naval Academy.'),
+  (1, 'about_steps', 'drop', 'Purified', 'Water is purified in our Kannur plant through a multi-stage process.'),
+  (2, 'about_steps', 'drop', 'Quality assured', 'Produced to FSSAI and BIS standard IS 14543.'),
+  (3, 'about_steps', 'drop', 'Bottled', 'Filled and sealed in 500 ml, 1 litre and 2 litre packs.'),
+  (4, 'about_steps', 'drop', 'Dispatched', 'Our fleet of 10 trucks delivers to distributors every day.'),
+  (5, 'about_steps', 'drop', 'Across North Kerala', '80+ distributors in Kannur, Kasaragod, Wayanad and up to Koyilandy.');
 
 insert into public.minerals (sort, label, range, unit, note, highlight) values
   (1, 'TDS (Total Dissolved Solids)', '75 – 500', 'mg/L', 'A minimum of 75 mg/L is now mandatory', true),
@@ -98,7 +99,7 @@ insert into public.minerals (sort, label, range, unit, note, highlight) values
   (4, 'pH level', '6.5 – 8.5', '', 'Neutral, balanced water', false);
 
 insert into public.process_phases (sort, name, intro, color, ink, tint) values
-  (1, 'Source & storage', 'Water is collected from a protected source, given a first disinfection and allowed to settle before treatment begins.', '#0B7568', '#FFFFFF', '#E6F3F0'),
+  (1, 'Intake & storage', 'Water is received into the raw water tank, given a first disinfection and allowed to settle before treatment begins.', '#0B7568', '#FFFFFF', '#E6F3F0'),
   (2, 'Filtration', 'Sand, carbon and cartridge filters remove sediment, chlorine, odour and colour, step by step.', '#2346B5', '#FFFFFF', '#E8EDFA'),
   (3, 'Purification & sterilisation', 'Membranes, fine filters, ultraviolet light and ozone deal with bacteria, viruses and spores.', '#0F1E5A', '#FFFFFF', '#DDE3F5'),
   (4, 'Fill & quality', 'Bottles are rinsed, filled and capped by machine, tested, then sealed and packed for distribution.', '#F4B942', '#0F1E5A', '#FFF4DC');
