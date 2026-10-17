@@ -100,7 +100,8 @@
       "description": "Purified drinking water in 300 ml, 500 ml, 750 ml, 1 litre, 1.5 litre and 2 litre bottles, plus a 20-litre jar for homes and offices.",
       "label_color": "#0E8A7B",
       "cap_color": "#1FA36B",
-      "logo_url": "/images/logo-gangothri.png"
+      "logo_url": "/images/logo-gangothri.png",
+      "image_url": ""
     },
     {
       "sort": 2,
@@ -109,7 +110,8 @@
       "description": "Packaged drinking water with purity in every drop. [Available sizes and where Ifthaar is sold.]",
       "label_color": "#1E3FA8",
       "cap_color": "#2346B5",
-      "logo_url": "/images/logo-ifthaar.png"
+      "logo_url": "/images/logo-ifthaar.png",
+      "image_url": ""
     }
   ],
   "products": [

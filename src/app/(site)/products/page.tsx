@@ -38,7 +38,12 @@ export default async function ProductsPage() {
           <div className="brand-grid">
             {brands.map((b, i) => (
               <article key={b.id ?? i} className="brand-card lift" style={{ background: b.label_color }}>
-                <Bottle brand={b.name} capColor={b.cap_color} labelColor="rgba(0,0,0,0.25)" height={220} variant="glass" />
+                {b.image_url ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img className="brand-photo" src={b.image_url} alt={`${b.name} bottle`} />
+                ) : (
+                  <Bottle brand={b.name} capColor={b.cap_color} labelColor="rgba(0,0,0,0.25)" height={220} variant="glass" />
+                )}
                 <div>
                   <h3>{b.name}</h3>
                   <p>{b.description}</p>

@@ -67,6 +67,7 @@ export const COLLECTIONS: Collection[] = [
       { name: 'name', label: 'Brand name', type: 'text', required: true },
       { name: 'slug', label: 'Short ID', type: 'text', required: true, help: 'Lower-case, no spaces, e.g. gangothri. Don’t change it after products use it.' },
       { name: 'logo_url', label: 'Brand logo', type: 'image', help: 'Shown on the About page. PNG with the logo’s own background works best.' },
+      { name: 'image_url', label: 'Bottle photo', type: 'image', help: 'Optional. A real photo of the bottle, shown on the About and Products pages. A PNG with a transparent background looks best. Leave empty to show a drawn bottle.' },
       { name: 'description', label: 'Description', type: 'textarea' },
       { name: 'label_color', label: 'Label colour', type: 'color' },
       { name: 'cap_color', label: 'Cap colour', type: 'color' },

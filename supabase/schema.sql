@@ -82,6 +82,7 @@ create table if not exists public.brands (
   name        text not null,
   description text not null default '',
   logo_url    text not null default '',
+  image_url   text not null default '',   -- bottle photo; when empty a bottle is drawn
   label_color text not null default '#1E3FA8',
   cap_color   text not null default '#2346B5'
 );

@@ -48,9 +48,9 @@ insert into public.slides (sort, eyebrow, title, body, cta_label, cta_link, imag
   (3, 'Gangothri purified water', 'From 300 ml to 2 litres.', 'A size for every table, from single servings to household bottles, and 20-litre jars for home and office.', 'See all sizes', '/products', '', 'gangothri', '1 Litre', '7,000 cases', 'Packed every day'),
   (4, 'Ifthaar packaged drinking water', 'Near you, across Kerala.', 'Our distributor network brings Gangothri and Ifthaar to shops, homes and offices throughout the state.', 'Find a distributor', '/contact', '', 'ifthaar', '', '74', 'Distributors');
 
-insert into public.brands (sort, slug, name, description, label_color, cap_color, logo_url) values
-  (1, 'gangothri', 'Gangothri', 'Purified drinking water in 300 ml, 500 ml, 750 ml, 1 litre, 1.5 litre and 2 litre bottles, plus a 20-litre jar for homes and offices.', '#0E8A7B', '#1FA36B', '/images/logo-gangothri.png'),
-  (2, 'ifthaar', 'Ifthaar', 'Packaged drinking water with purity in every drop. [Available sizes and where Ifthaar is sold.]', '#1E3FA8', '#2346B5', '/images/logo-ifthaar.png');
+insert into public.brands (sort, slug, name, description, label_color, cap_color, logo_url, image_url) values
+  (1, 'gangothri', 'Gangothri', 'Purified drinking water in 300 ml, 500 ml, 750 ml, 1 litre, 1.5 litre and 2 litre bottles, plus a 20-litre jar for homes and offices.', '#0E8A7B', '#1FA36B', '/images/logo-gangothri.png', ''),
+  (2, 'ifthaar', 'Ifthaar', 'Packaged drinking water with purity in every drop. [Available sizes and where Ifthaar is sold.]', '#1E3FA8', '#2346B5', '/images/logo-ifthaar.png', '');
 
 insert into public.products (sort, featured, brand_slug, name, size, pack, tag, is_bulk, bottle_height) values
   (1, true, 'gangothri', 'Gangothri 500 ml', '500ml', 'Regular · case of [00]', 'Regular', false, 170),
