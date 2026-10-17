@@ -66,6 +66,7 @@ export const COLLECTIONS: Collection[] = [
     fields: [
       { name: 'name', label: 'Brand name', type: 'text', required: true },
       { name: 'slug', label: 'Short ID', type: 'text', required: true, help: 'Lower-case, no spaces, e.g. gangothri. Don’t change it after products use it.' },
+      { name: 'logo_url', label: 'Brand logo', type: 'image', help: 'Shown on the About page. PNG with the logo’s own background works best.' },
       { name: 'description', label: 'Description', type: 'textarea' },
       { name: 'label_color', label: 'Label colour', type: 'color' },
       { name: 'cap_color', label: 'Cap colour', type: 'color' },

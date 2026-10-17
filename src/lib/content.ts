@@ -8,7 +8,7 @@ export type Slide = {
   cta_label: string; cta_link: string; image_url: string; bottle_brand: string; bottle_label: string;
   stat_value: string; stat_label: string;
 };
-export type Brand = { id?: string; sort: number; slug: string; name: string; description: string; label_color: string; cap_color: string };
+export type Brand = { id?: string; sort: number; slug: string; name: string; description: string; label_color: string; cap_color: string; logo_url?: string };
 export type Product = {
   id?: string; sort: number; published?: boolean; featured: boolean; brand_slug: string; name: string; size: string;
   pack: string; tag: string; is_bulk: boolean; image_url?: string; bottle_height: number;

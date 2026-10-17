@@ -185,6 +185,9 @@ button { font-family: inherit; }
 .brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .brand-card { color: var(--white); border-radius: 28px; padding: 40px; display: flex; gap: 28px; align-items: center; overflow: hidden; }
 .brand-card h3 { font-family: Georgia, serif; font-size: 34px; }
+.brand-card > svg { flex: none; }
+.brand-logo { display: block; height: 72px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 10px 24px rgba(0, 0, 0, .25); }
+@media (max-width: 760px) { .brand-logo { height: 60px; margin: 0 auto; } }
 .brand-card p { font-size: 16px; line-height: 1.65; opacity: .92; margin: 12px 0; }
 .brand-card a { color: var(--white); font-weight: 700; }
 .val-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }

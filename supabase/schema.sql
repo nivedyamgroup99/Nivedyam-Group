@@ -81,6 +81,7 @@ create table if not exists public.brands (
   slug        text not null unique,
   name        text not null,
   description text not null default '',
+  logo_url    text not null default '',
   label_color text not null default '#1E3FA8',
   cap_color   text not null default '#2346B5'
 );
